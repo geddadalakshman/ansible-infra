@@ -1,0 +1,4 @@
+component: user
+schema_type: mongo
+env: dev
+#node_exporter: true
