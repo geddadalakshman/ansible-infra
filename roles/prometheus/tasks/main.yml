@@ -1,7 +1,11 @@
-#- name: Change configurations file
-#  ansible.builtin.import_tasks:
-#    file: server.yml
-#  when: prometheus_server
-#
-#
-#
+- name: Change configurations file
+  ansible.builtin.import_tasks:
+    file: server.yml
+  when: prometheus_server
+
+- name: Install node exporter
+  ansible.builtin.import_tasks:
+    file: exporter.yml
+  when: node_exporter
+
+
